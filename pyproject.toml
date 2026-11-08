@@ -1,6 +1,6 @@
 [project]
 name = "csv-dialect-sniffer-kit"
-version = "0.1.1"
+version = "0.1.2"
 description = "Detects a CSV dialect (delimiter, quote character, escape character) from a sample string, deterministically and without third-party dependencies."
 requires-python = ">=3.10"
 dependencies = []
