@@ -40,3 +40,10 @@ A sample with no delimiter at all (a single column of data) scores every
 candidate equally.  The detector returns comma in that case, because comma is
 the first candidate in the fixed order.  If your data is single-column and you
 care about the exact delimiter, pass a sample that actually contains one.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
